@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
 from todolist.views import HomePageView, CategoryList, CategoryCreate, CategoryDetailView, CategoryDelete, \
-    CategoryUpdate
+    CategoryUpdate, TaskCreate
 from . import views
 
 urlpatterns = [
@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^categories/(?P<pk>[-\w]+)/$', CategoryDetailView.as_view(), name='category-detail'),
     url(r'^categories/(?P<pk>[-\w]+)/update/$', CategoryUpdate.as_view(), name='category-update'),
     url(r'^categories/(?P<pk>[-\w]+)/delete/$', CategoryDelete.as_view(), name='category-delete'),
+    url(r'^tasks/create/$', TaskCreate.as_view(), name='task-create'),
 
 ]

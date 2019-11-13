@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.core.urlresolvers import reverse
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.views import View
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
@@ -12,7 +12,7 @@ from django.views.generic.detail import DetailView
 # from django.views.generic import CreateView, UpdateView, DeleteView, ListView, DetailView
 
 from todolist.forms import CategoryForm
-from todolist.models import Category
+from todolist.models import Category, Task
 
 
 class HomePageView(View):
@@ -47,3 +47,16 @@ class CategoryUpdate(UpdateView):
 
 class CategoryDelete(DeleteView):
 	model = Category
+
+
+class TaskCreate(CreateView):
+    model = Task
+    fields = ('description', 'category', 'start_date', )
+    template_name = 'todolist/task_create.html'
+
+
+class TaskUpdate(UpdateView):
+	model = Task
+	fields = ('description', 'category', 'start_date', )
+	template_name = 'todolist/task_update.html'
+	context_object_name = 'task'

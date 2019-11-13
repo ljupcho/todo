@@ -18,10 +18,13 @@ class Category(models.Model):
 
 class Task(models.Model):
 	description = models.TextField(blank=False)
-	start_date = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
+	start_date = models.DateTimeField()
 	category = models.ForeignKey(Category, on_delete=models.CASCADE)
 	created_at = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
 
 	def __str__(self):
 		return self.description
+
+	def get_absolute_url(self):
+		return reverse('category-detail', kwargs={'pk': self.category.id})
 
