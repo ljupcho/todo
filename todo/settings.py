@@ -14,7 +14,12 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
+PROJECT_PATH = os.path.abspath(PROJECT_PATH)
+TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
+STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
+DATABASE_PATH = os.path.join(PROJECT_PATH, 'rango.db')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -55,7 +60,7 @@ ROOT_URLCONF = 'todo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_PATH],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,8 +81,13 @@ WSGI_APPLICATION = 'todo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'vs_todo',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'db',   # docker service name
+        'PORT': '3306',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

@@ -1,7 +1,8 @@
 from django.conf.urls import url
 
+from todolist.views import HomePageView
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', HomePageView.as_view()),
 ]
