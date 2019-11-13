@@ -28,3 +28,8 @@ class Task(models.Model):
 	def get_absolute_url(self):
 		return reverse('category-detail', kwargs={'pk': self.category.id})
 
+
+class FailedTask(models.Model):
+	description = models.TextField(blank=False)
+	failed_at = models.DateTimeField()
+

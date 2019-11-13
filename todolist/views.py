@@ -53,7 +53,14 @@ class TaskCreate(CreateView):
 	template_name = 'todolist/task_create.html'
 
 	def post(self, request, *args, **kwargs):
-		task = adding_task.depay(1, 1)
+		try:
+			task = adding_task.delay(1)
+		except Exception as e:
+			print(str(e))
+			# keep the task in database for cron loop in case redis was done
+			# FailedTask.objects.create(description=str(e), failed_at=timezone.now())
+			pass
+
 		return super(TaskCreate, self).post(self, request, *args, **kwargs)
 
 
