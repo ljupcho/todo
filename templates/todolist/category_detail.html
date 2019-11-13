@@ -1,0 +1,20 @@
+{% extends 'todolist/base.html' %}
+
+{% block title %} Category {% endblock %}
+
+{% block body_block %}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Category Details #{{category.id}}</h5>
+    </div>
+    <div class="card-body">
+    <dl class="row">
+      <dt class="col-sm-3">Category Name</dt>
+      <dd class="col-sm-9">{{ category.name }}</dd>
+    </dl>
+
+    </div>
+</div>
+
+{% endblock %}
