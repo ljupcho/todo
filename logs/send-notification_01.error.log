@@ -1,0 +1,114 @@
+/usr/local/lib/python2.7/site-packages/celery/platforms.py:796: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2019-11-14 09:21:45,067: INFO/MainProcess] Connected to redis://redis:6379//
+[2019-11-14 09:21:45,082: INFO/MainProcess] mingle: searching for neighbors
+[2019-11-14 09:21:46,112: INFO/MainProcess] mingle: all alone
+[2019-11-14 09:21:46,144: WARNING/MainProcess] /usr/local/lib/python2.7/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-11-14 09:21:46,144: INFO/MainProcess] celery@f11cac94734b ready.
+
+worker: Warm shutdown (MainProcess)
+/usr/local/lib/python2.7/site-packages/celery/platforms.py:796: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2019-11-14 09:25:09,313: INFO/MainProcess] Connected to redis://redis:6379//
+[2019-11-14 09:25:09,320: INFO/MainProcess] mingle: searching for neighbors
+[2019-11-14 09:25:10,342: INFO/MainProcess] mingle: all alone
+[2019-11-14 09:25:10,369: WARNING/MainProcess] /usr/local/lib/python2.7/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-11-14 09:25:10,369: INFO/MainProcess] celery@f11cac94734b ready.
+
+worker: Warm shutdown (MainProcess)
+/usr/local/lib/python2.7/site-packages/celery/platforms.py:796: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2019-11-14 09:26:49,059: INFO/MainProcess] Connected to redis://redis:6379//
+[2019-11-14 09:26:49,069: INFO/MainProcess] mingle: searching for neighbors
+[2019-11-14 09:26:50,091: INFO/MainProcess] mingle: all alone
+[2019-11-14 09:26:50,115: WARNING/MainProcess] /usr/local/lib/python2.7/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-11-14 09:26:50,116: INFO/MainProcess] celery@f11cac94734b ready.
+
+worker: Warm shutdown (MainProcess)
+/usr/local/lib/python2.7/site-packages/celery/platforms.py:796: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2019-11-14 09:30:37,969: INFO/MainProcess] Connected to redis://redis:6379//
+[2019-11-14 09:30:37,985: INFO/MainProcess] mingle: searching for neighbors
+[2019-11-14 09:30:39,018: INFO/MainProcess] mingle: all alone
+[2019-11-14 09:30:39,049: WARNING/MainProcess] /usr/local/lib/python2.7/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-11-14 09:30:39,049: INFO/MainProcess] celery@f11cac94734b ready.
+
+worker: Warm shutdown (MainProcess)
+/usr/local/lib/python2.7/site-packages/celery/platforms.py:796: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2019-11-14 09:32:29,082: INFO/MainProcess] Connected to redis://redis:6379//
+[2019-11-14 09:32:29,099: INFO/MainProcess] mingle: searching for neighbors
+[2019-11-14 09:32:30,123: INFO/MainProcess] mingle: all alone
+[2019-11-14 09:32:30,142: WARNING/MainProcess] /usr/local/lib/python2.7/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-11-14 09:32:30,142: INFO/MainProcess] celery@f11cac94734b ready.
+
+worker: Warm shutdown (MainProcess)
+/usr/local/lib/python2.7/site-packages/celery/platforms.py:796: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2019-11-14 09:33:59,824: INFO/MainProcess] Connected to redis://redis:6379//
+[2019-11-14 09:33:59,833: INFO/MainProcess] mingle: searching for neighbors
+[2019-11-14 09:34:00,856: INFO/MainProcess] mingle: all alone
+[2019-11-14 09:34:00,875: WARNING/MainProcess] /usr/local/lib/python2.7/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-11-14 09:34:00,875: INFO/MainProcess] celery@f11cac94734b ready.
+
+worker: Warm shutdown (MainProcess)
+/usr/local/lib/python2.7/site-packages/celery/platforms.py:796: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2019-11-14 09:36:30,848: INFO/MainProcess] Connected to redis://redis:6379//
+[2019-11-14 09:36:30,860: INFO/MainProcess] mingle: searching for neighbors
+[2019-11-14 09:36:31,882: INFO/MainProcess] mingle: all alone
+[2019-11-14 09:36:31,904: WARNING/MainProcess] /usr/local/lib/python2.7/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-11-14 09:36:31,904: INFO/MainProcess] celery@f11cac94734b ready.
+[2019-11-14 09:37:08,619: INFO/MainProcess] Received task: todolist.tasks.adding_task[9725d7d4-356f-4764-853b-bcc68596d120]  
+[2019-11-14 09:37:08,646: WARNING/ForkPoolWorker-1] /usr/local/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1447: RuntimeWarning: DateTimeField Task.start_date received a naive datetime (2019-11-13 23:23:00) while time zone support is active.
+  RuntimeWarning)
+[2019-11-14 09:37:08,656: INFO/ForkPoolWorker-1] Task todolist.tasks.adding_task[9725d7d4-356f-4764-853b-bcc68596d120] succeeded in 0.034270827s: None

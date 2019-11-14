@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.core.urlresolvers import reverse
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views import View
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 
+from todolist.decorators import dispatch_task
 from todolist.models import Category, Task
 from todolist.tasks import adding_task
 
@@ -53,15 +53,15 @@ class TaskCreate(CreateView):
 	template_name = 'todolist/task_create.html'
 
 	def post(self, request, *args, **kwargs):
-		try:
-			task = adding_task.delay(1)
-		except Exception as e:
-			print(str(e))
-			# keep the task in database for cron loop in case redis was done
-			# FailedTask.objects.create(description=str(e), failed_at=timezone.now())
-			pass
 
-		return super(TaskCreate, self).post(self, request, *args, **kwargs)
+		response = super(TaskCreate, self).post(self, request, *args, **kwargs)
+
+		def run_task():
+			task = adding_task.delay(1)
+
+		dispatch_task(run_task())
+
+		return response
 
 
 class TaskUpdate(UpdateView):
@@ -69,3 +69,14 @@ class TaskUpdate(UpdateView):
 	fields = ('description', 'category', 'start_date',)
 	template_name = 'todolist/task_update.html'
 	context_object_name = 'task'
+
+	def post(self, request, *args, **kwargs):
+
+		response = super(TaskUpdate, self).post(self, request, *args, **kwargs)
+
+		def run_task():
+			task = adding_task.delay(1)
+
+		dispatch_task(run_task())
+
+		return response

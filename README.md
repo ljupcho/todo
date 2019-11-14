@@ -14,3 +14,8 @@ You would access the app in browser with **http://localhost:8081/todolist/** and
  web/consumer uwsgi containers - 9000<br/>
  redis - 6379<br/>
  Make sure those are not taken as well. In the docker app there is .env file if you prefer to adjust the ports, version of some packages or database credentials.
+<br /><br />
+Check the consumers running:<br />
+docker-compose exec consumers bash<br />
+ps aux | grep worker<br />
+<br /><br />
