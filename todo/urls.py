@@ -16,7 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from todolist.views import FailedTasks
+
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     url(r'^todolist/', include('todolist.urls')),
+    url(r'^api/cron/runFailedJobs', FailedTasks.as_view()),
 ]

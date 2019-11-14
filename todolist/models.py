@@ -32,4 +32,5 @@ class Task(models.Model):
 class FailedTask(models.Model):
 	description = models.TextField(blank=False)
 	failed_at = models.DateTimeField()
+	category_id = models.IntegerField(blank=True)
 

@@ -1,3 +1,6 @@
+from __future__ import absolute_import
+
+from todolist.decorators import dispatch_task
 from todolist.models import Category, Task
 
 
@@ -29,4 +32,5 @@ class Notifier:
 		service = Notifier(category_id)
 		service.create_auto_task()
 		service.send_mail()
+
 

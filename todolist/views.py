@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views import View
@@ -9,7 +10,7 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 
 from todolist.decorators import dispatch_task
-from todolist.models import Category, Task
+from todolist.models import Category, Task, FailedTask
 from todolist.tasks import adding_task
 
 
@@ -80,3 +81,23 @@ class TaskUpdate(UpdateView):
 		dispatch_task(run_task())
 
 		return response
+
+
+class FailedTasks(View):
+	def get(self, request):
+		tasks = FailedTask.objects.all()
+
+		def run_task(id):
+			task = adding_task.delay(id)
+
+		for task in tasks:
+			dispatch_task(run_task(task.category_id), task.category_id)
+
+		return HttpResponse('OK')
+
+
+
+
+
+
+
