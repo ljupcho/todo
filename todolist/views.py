@@ -12,6 +12,8 @@ from django.views.generic.detail import DetailView
 from todolist.decorators import dispatch_task
 from todolist.models import Category, Task, FailedTask
 from todolist.tasks import adding_task
+import logging
+logger = logging.getLogger(__name__)
 
 
 class HomePageView(View):
